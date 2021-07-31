@@ -4,52 +4,28 @@
     "x": 0,
     "y": 0,
     "uniqueID": 311671,
-    "ioValues": [],
+    "ioValues": [
+        {
+            "name": "Wood Thickness",
+            "ioValue": 18
+        }
+    ],
     "topLevel": true,
     "allAtoms": [
         {
             "atomType": "Molecule",
             "name": "Side",
-            "x": 0.20351390922401172,
-            "y": 0.5458015267175573,
+            "x": 0.2049780380673499,
+            "y": 0.41221374045801523,
             "uniqueID": 763962,
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "Wood Thickness",
+                    "ioValue": 10
+                }
+            ],
             "topLevel": false,
             "allAtoms": [
-                {
-                    "atomType": "Move",
-                    "name": "Move",
-                    "x": 0.21742313323572474,
-                    "y": 0.2099236641221374,
-                    "uniqueID": 907082,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": "atoms/311671/763962/203517UploadSVG"
-                        },
-                        {
-                            "name": "xDist",
-                            "ioValue": -1520
-                        },
-                        {
-                            "name": "yDist",
-                            "ioValue": 2290
-                        },
-                        {
-                            "name": "zDist",
-                            "ioValue": 0
-                        }
-                    ]
-                },
-                {
-                    "atomType": "UploadSVG",
-                    "name": "SutroTower.svg",
-                    "x": 0.057833089311859445,
-                    "y": 0.33587786259541985,
-                    "uniqueID": 203517,
-                    "ioValues": [],
-                    "fileName": "SutroTower.svg"
-                },
                 {
                     "atomType": "Rectangle",
                     "name": "Rectangle",
@@ -91,6 +67,14 @@
                             "ioValue": 0
                         }
                     ]
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Wood Thickness",
+                    "x": 0.013333333333333334,
+                    "y": 0.4809160305343511,
+                    "uniqueID": 712635,
+                    "ioValues": []
                 },
                 {
                     "atomType": "Move",
@@ -152,35 +136,6 @@
                     "closedSelection": 0
                 },
                 {
-                    "atomType": "Group",
-                    "name": "Group",
-                    "x": 0.5592972181551977,
-                    "y": 0.4541984732824427,
-                    "uniqueID": 734927,
-                    "ioValues": [
-                        {
-                            "name": "3D shape 2",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "3D shape 4",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "3D shape 5",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "3D shape 6",
-                            "ioValue": 10
-                        },
-                        {
-                            "name": "3D shape 7",
-                            "ioValue": 10
-                        }
-                    ]
-                },
-                {
                     "atomType": "Move",
                     "name": "Move",
                     "x": 0.23792093704245976,
@@ -202,6 +157,48 @@
                         {
                             "name": "zDist",
                             "ioValue": 0
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Group",
+                    "name": "Group",
+                    "x": 0.5673499267935578,
+                    "y": 0.48854961832061067,
+                    "uniqueID": 734927,
+                    "ioValues": [
+                        {
+                            "name": "3D shape 2",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "3D shape 4",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "3D shape 5",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "3D shape 7",
+                            "ioValue": 10
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.753294289897511,
+                    "y": 0.3091603053435114,
+                    "uniqueID": 164125,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "atoms/311671/763962/734927Group"
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 10
                         }
                     ]
                 },
@@ -339,8 +336,8 @@
                 {
                     "atomType": "Molecule",
                     "name": "Attachments",
-                    "x": 0.6530014641288433,
-                    "y": 0.7595419847328244,
+                    "x": 0.5929721815519766,
+                    "y": 0.8816793893129771,
                     "uniqueID": 515329,
                     "ioValues": [],
                     "topLevel": false,
@@ -367,26 +364,63 @@
                     "ioValues": [
                         {
                             "name": "number or geometry",
-                            "ioValue": "atoms/311671/763962/734927Group"
+                            "ioValue": "atoms/311671/763962/164125Extrude"
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Group",
+                    "name": "Group",
+                    "x": 0.8806734992679356,
+                    "y": 0.7366412213740459,
+                    "uniqueID": 346285,
+                    "ioValues": [
+                        {
+                            "name": "3D shape 1",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "3D shape 2",
+                            "ioValue": 10
+                        }
+                    ]
+                },
+                {
+                    "atomType": "UploadSVG",
+                    "name": "SutroTower.svg",
+                    "x": 0.725475841874085,
+                    "y": 0.8931297709923663,
+                    "uniqueID": 203517,
+                    "ioValues": [],
+                    "fileName": "SutroTower.svg"
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.8030746705710103,
+                    "y": 0.8396946564885496,
+                    "uniqueID": 907082,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "atoms/311671/763962/203517UploadSVG"
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": -1520
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 2290
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": 0
                         }
                     ]
                 }
             ],
             "allConnectors": [
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "3D shape 6",
-                    "ap2Primary": false,
-                    "ap1ID": 907082,
-                    "ap2ID": 734927
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
-                    "ap1ID": 203517,
-                    "ap2ID": 907082
-                },
                 {
                     "ap1Name": "geometry",
                     "ap2Name": "geometry",
@@ -400,6 +434,13 @@
                     "ap2Primary": false,
                     "ap1ID": 898071,
                     "ap2ID": 734927
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "height",
+                    "ap2Primary": false,
+                    "ap1ID": 712635,
+                    "ap2ID": 164125
                 },
                 {
                     "ap1Name": "geometry",
@@ -417,13 +458,6 @@
                 },
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "number or geometry",
-                    "ap2Primary": false,
-                    "ap1ID": 734927,
-                    "ap2ID": 140863
-                },
-                {
-                    "ap1Name": "geometry",
                     "ap2Name": "3D shape 3",
                     "ap2Primary": false,
                     "ap1ID": 358661,
@@ -435,6 +469,27 @@
                     "ap2Primary": false,
                     "ap1ID": 358661,
                     "ap2ID": 245145
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 734927,
+                    "ap2ID": 164125
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "3D shape 1",
+                    "ap2Primary": false,
+                    "ap1ID": 734927,
+                    "ap2ID": 346285
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 164125,
+                    "ap2ID": 140863
                 },
                 {
                     "ap1Name": "geometry",
@@ -498,10 +553,32 @@
                     "ap2Primary": false,
                     "ap1ID": 482993,
                     "ap2ID": 734927
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 203517,
+                    "ap2ID": 907082
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "3D shape 2",
+                    "ap2Primary": false,
+                    "ap1ID": 907082,
+                    "ap2ID": 346285
                 }
             ],
             "fileTypeVersion": 1,
             "simplify": false
+        },
+        {
+            "atomType": "Input",
+            "name": "Wood Thickness",
+            "x": 0.013333333333333334,
+            "y": 0.7251908396946565,
+            "uniqueID": 484873,
+            "ioValues": []
         },
         {
             "atomType": "Circle",
