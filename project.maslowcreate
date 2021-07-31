@@ -8,6 +8,15 @@
     "topLevel": true,
     "allAtoms": [
         {
+            "atomType": "UploadSVG",
+            "name": "SutroTower.svg",
+            "x": 0.23023715415019763,
+            "y": 0.5038167938931297,
+            "uniqueID": 926617,
+            "ioValues": [],
+            "fileName": "SutroTower.svg"
+        },
+        {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9853587115666179,
