@@ -2764,23 +2764,44 @@
             "selectedColorIndex": 0
         },
         {
+            "atomType": "Assembly",
+            "name": "Assembly",
+            "x": 0.5556368960468522,
+            "y": 0.7022900763358778,
+            "uniqueID": 714300,
+            "ioValues": [
+                {
+                    "name": "3D shape 1",
+                    "ioValue": 10
+                },
+                {
+                    "name": "3D shape 2",
+                    "ioValue": 10
+                },
+                {
+                    "name": "3D shape 3",
+                    "ioValue": 10
+                }
+            ]
+        },
+        {
             "atomType": "Molecule",
             "name": "Top Triangle",
-            "x": 0.32942898975109813,
-            "y": 0.8282442748091602,
+            "x": 0.3389458272327965,
+            "y": 0.8358778625954199,
             "uniqueID": 970101,
             "ioValues": [
                 {
-                    "name": "Wood Thickness",
-                    "ioValue": 18
+                    "name": "Height",
+                    "ioValue": 1300
                 },
                 {
                     "name": "Radius",
-                    "ioValue": 10
+                    "ioValue": 180
                 },
                 {
-                    "name": "Height",
-                    "ioValue": 10
+                    "name": "Wood Thickness",
+                    "ioValue": 18
                 }
             ],
             "topLevel": false,
@@ -2789,17 +2810,25 @@
                     "atomType": "Input",
                     "name": "Height",
                     "x": 0.013333333333333334,
-                    "y": 0.4236641221374046,
+                    "y": 0.13740458015267176,
                     "uniqueID": 608714,
                     "ioValues": []
                 },
                 {
                     "atomType": "Molecule",
-                    "name": "Support Triangle",
-                    "x": 0.25768667642752563,
-                    "y": 0.38167938931297707,
+                    "name": "Outer Triangle",
+                    "x": 0.363103953147877,
+                    "y": 0.40076335877862596,
                     "uniqueID": 665720,
                     "ioValues": [
+                        {
+                            "name": "Height",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "Radius",
+                            "ioValue": 180
+                        },
                         {
                             "name": "Wood Thickness",
                             "ioValue": 18
@@ -2824,7 +2853,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "atoms/311671/322048/488380/682574Move"
+                                    "ioValue": "atoms/311671/970101/665720/682574Move"
                                 },
                                 {
                                     "name": "x-axis degrees",
@@ -2849,7 +2878,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "atoms/311671/322048/488380/897967Rectangle"
+                                    "ioValue": "atoms/311671/970101/665720/897967Rectangle"
                                 },
                                 {
                                     "name": "xDist",
@@ -2857,7 +2886,7 @@
                                 },
                                 {
                                     "name": "yDist",
-                                    "ioValue": 150
+                                    "ioValue": 180
                                 },
                                 {
                                     "name": "zDist",
@@ -2882,7 +2911,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "atoms/311671/322048/488380/982300Extrude"
+                                    "ioValue": "atoms/311671/970101/665720/982300Extrude"
                                 },
                                 {
                                     "name": "xDist",
@@ -2894,7 +2923,7 @@
                                 },
                                 {
                                     "name": "zDist",
-                                    "ioValue": 312
+                                    "ioValue": 10
                                 }
                             ]
                         },
@@ -2907,15 +2936,15 @@
                             "ioValues": [
                                 {
                                     "name": "3D shape 1",
-                                    "ioValue": ""
+                                    "ioValue": "atoms/311671/970101/665720/513328Rotate"
                                 },
                                 {
                                     "name": "3D shape 2",
-                                    "ioValue": ""
+                                    "ioValue": "atoms/311671/970101/665720/682574Move"
                                 },
                                 {
                                     "name": "3D shape 3",
-                                    "ioValue": ""
+                                    "ioValue": "atoms/311671/970101/665720/219279Rotate"
                                 },
                                 {
                                     "name": "3D shape 4",
@@ -2949,7 +2978,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "atoms/311671/322048/488380/682574Move"
+                                    "ioValue": "atoms/311671/970101/665720/682574Move"
                                 },
                                 {
                                     "name": "x-axis degrees",
@@ -2991,7 +3020,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "atoms/311671/322048/488380/382341Move"
+                                    "ioValue": "atoms/311671/970101/665720/382341Move"
                                 },
                                 {
                                     "name": "x-axis degrees",
@@ -3024,7 +3053,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "atoms/311671/322048/488380/314864ShrinkWrap"
+                                    "ioValue": "atoms/311671/970101/665720/314864ShrinkWrap"
                                 },
                                 {
                                     "name": "height",
@@ -3038,7 +3067,12 @@
                             "x": 0.9802371541501975,
                             "y": 0.5,
                             "uniqueID": 803045,
-                            "ioValues": []
+                            "ioValues": [
+                                {
+                                    "name": "number or geometry",
+                                    "ioValue": "atoms/311671/970101/665720/527116Rotate"
+                                }
+                            ]
                         }
                     ],
                     "allConnectors": [
@@ -3146,6 +3180,62 @@
                     "ioValues": []
                 },
                 {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.6508052708638361,
+                    "y": 0.26717557251908397,
+                    "uniqueID": 248909,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "atoms/311671/970101/379377Difference"
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": 1300
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Equation",
+                    "name": "R-60",
+                    "x": 0.2254758418740849,
+                    "y": 0.6717557251908397,
+                    "uniqueID": 561547,
+                    "ioValues": [
+                        {
+                            "name": "R",
+                            "ioValue": 180
+                        }
+                    ],
+                    "currentEquation": "R-60"
+                },
+                {
+                    "atomType": "Difference",
+                    "name": "Difference",
+                    "x": 0.5358711566617862,
+                    "y": 0.47709923664122134,
+                    "uniqueID": 379377,
+                    "ioValues": [
+                        {
+                            "name": "geometry2",
+                            "ioValue": "atoms/311671/970101/827363/527116Rotate"
+                        },
+                        {
+                            "name": "geometry1",
+                            "ioValue": "atoms/311671/970101/665720/527116Rotate"
+                        }
+                    ]
+                },
+                {
                     "atomType": "Input",
                     "name": "Wood Thickness",
                     "x": 0.013333333333333334,
@@ -3155,11 +3245,19 @@
                 },
                 {
                     "atomType": "Molecule",
-                    "name": "Support Triangle",
-                    "x": 0.2759882869692533,
-                    "y": 0.767175572519084,
+                    "name": "Inner Triangle",
+                    "x": 0.38726207906295756,
+                    "y": 0.8091603053435115,
                     "uniqueID": 827363,
                     "ioValues": [
+                        {
+                            "name": "Height",
+                            "ioValue": 10
+                        },
+                        {
+                            "name": "Radius",
+                            "ioValue": 120
+                        },
                         {
                             "name": "Wood Thickness",
                             "ioValue": 18
@@ -3192,7 +3290,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "atoms/311671/322048/488380/682574Move"
+                                    "ioValue": "atoms/311671/970101/827363/682574Move"
                                 },
                                 {
                                     "name": "x-axis degrees",
@@ -3217,7 +3315,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "atoms/311671/322048/488380/897967Rectangle"
+                                    "ioValue": "atoms/311671/970101/827363/897967Rectangle"
                                 },
                                 {
                                     "name": "xDist",
@@ -3225,7 +3323,7 @@
                                 },
                                 {
                                     "name": "yDist",
-                                    "ioValue": 150
+                                    "ioValue": 120
                                 },
                                 {
                                     "name": "zDist",
@@ -3242,7 +3340,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "atoms/311671/322048/488380/982300Extrude"
+                                    "ioValue": "atoms/311671/970101/827363/982300Extrude"
                                 },
                                 {
                                     "name": "xDist",
@@ -3254,7 +3352,7 @@
                                 },
                                 {
                                     "name": "zDist",
-                                    "ioValue": 312
+                                    "ioValue": 10
                                 }
                             ]
                         },
@@ -3267,15 +3365,15 @@
                             "ioValues": [
                                 {
                                     "name": "3D shape 1",
-                                    "ioValue": ""
+                                    "ioValue": "atoms/311671/970101/827363/513328Rotate"
                                 },
                                 {
                                     "name": "3D shape 2",
-                                    "ioValue": ""
+                                    "ioValue": "atoms/311671/970101/827363/682574Move"
                                 },
                                 {
                                     "name": "3D shape 3",
-                                    "ioValue": ""
+                                    "ioValue": "atoms/311671/970101/827363/219279Rotate"
                                 },
                                 {
                                     "name": "3D shape 4",
@@ -3309,7 +3407,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "atoms/311671/322048/488380/682574Move"
+                                    "ioValue": "atoms/311671/970101/827363/682574Move"
                                 },
                                 {
                                     "name": "x-axis degrees",
@@ -3351,7 +3449,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "atoms/311671/322048/488380/382341Move"
+                                    "ioValue": "atoms/311671/970101/827363/382341Move"
                                 },
                                 {
                                     "name": "x-axis degrees",
@@ -3384,7 +3482,7 @@
                             "ioValues": [
                                 {
                                     "name": "geometry",
-                                    "ioValue": "atoms/311671/322048/488380/314864ShrinkWrap"
+                                    "ioValue": "atoms/311671/970101/827363/314864ShrinkWrap"
                                 },
                                 {
                                     "name": "height",
@@ -3398,7 +3496,12 @@
                             "x": 0.9802371541501975,
                             "y": 0.5,
                             "uniqueID": 803045,
-                            "ioValues": []
+                            "ioValues": [
+                                {
+                                    "name": "number or geometry",
+                                    "ioValue": "atoms/311671/970101/827363/527116Rotate"
+                                }
+                            ]
                         }
                     ],
                     "allConnectors": [
@@ -3503,29 +3606,88 @@
                     "x": 0.9853587115666179,
                     "y": 0.5,
                     "uniqueID": 582115,
-                    "ioValues": []
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": "atoms/311671/970101/248909Move"
+                        }
+                    ]
                 }
             ],
-            "allConnectors": [],
-            "fileTypeVersion": 1,
-            "simplify": false
-        },
-        {
-            "atomType": "Assembly",
-            "name": "Assembly",
-            "x": 0.5556368960468522,
-            "y": 0.7022900763358778,
-            "uniqueID": 714300,
-            "ioValues": [
+            "allConnectors": [
                 {
-                    "name": "3D shape 1",
-                    "ioValue": 10
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "zDist",
+                    "ap2Primary": false,
+                    "ap1ID": 608714,
+                    "ap2ID": 248909
                 },
                 {
-                    "name": "3D shape 2",
-                    "ioValue": 10
+                    "ap1Name": "Geometry",
+                    "ap2Name": "geometry1",
+                    "ap2Primary": false,
+                    "ap1ID": 665720,
+                    "ap2ID": 379377
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "R",
+                    "ap2Primary": false,
+                    "ap1ID": 726744,
+                    "ap2ID": 561547
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "Radius",
+                    "ap2Primary": false,
+                    "ap1ID": 726744,
+                    "ap2ID": 665720
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 248909,
+                    "ap2ID": 582115
+                },
+                {
+                    "ap1Name": "result",
+                    "ap2Name": "Radius",
+                    "ap2Primary": false,
+                    "ap1ID": 561547,
+                    "ap2ID": 827363
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 379377,
+                    "ap2ID": 248909
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "Wood Thickness",
+                    "ap2Primary": false,
+                    "ap1ID": 694481,
+                    "ap2ID": 827363
+                },
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "Wood Thickness",
+                    "ap2Primary": false,
+                    "ap1ID": 694481,
+                    "ap2ID": 665720
+                },
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "geometry2",
+                    "ap2Primary": false,
+                    "ap1ID": 827363,
+                    "ap2ID": 379377
                 }
-            ]
+            ],
+            "fileTypeVersion": 1,
+            "simplify": false
         },
         {
             "atomType": "Output",
@@ -3639,6 +3801,13 @@
             "ap2Primary": true,
             "ap1ID": 714300,
             "ap2ID": 728468
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "3D shape 3",
+            "ap2Primary": false,
+            "ap1ID": 970101,
+            "ap2ID": 714300
         }
     ],
     "fileTypeVersion": 1,
