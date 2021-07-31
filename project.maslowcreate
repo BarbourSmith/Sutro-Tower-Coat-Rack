@@ -10,11 +10,49 @@
         {
             "atomType": "UploadSVG",
             "name": "SutroTower.svg",
-            "x": 0.23418972332015808,
-            "y": 0.4961832061068702,
+            "x": 0.17391304347826086,
+            "y": 0.3015267175572519,
             "uniqueID": 670767,
             "ioValues": [],
             "fileName": "SutroTower.svg"
+        },
+        {
+            "atomType": "Move",
+            "name": "Move",
+            "x": 0.3428853754940711,
+            "y": 0.5381679389312977,
+            "uniqueID": 125350,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "atoms/311671/670767UploadSVG"
+                },
+                {
+                    "name": "xDist",
+                    "ioValue": -1500
+                },
+                {
+                    "name": "yDist",
+                    "ioValue": 1500
+                },
+                {
+                    "name": "zDist",
+                    "ioValue": 0
+                }
+            ]
+        },
+        {
+            "atomType": "Circle",
+            "name": "Circle",
+            "x": 0.6996047430830039,
+            "y": 0.4427480916030534,
+            "uniqueID": 674575,
+            "ioValues": [
+                {
+                    "name": "diameter",
+                    "ioValue": 10
+                }
+            ]
         },
         {
             "atomType": "Output",
@@ -22,10 +60,30 @@
             "x": 0.9853587115666179,
             "y": 0.5,
             "uniqueID": 517841,
-            "ioValues": []
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": "atoms/311671/674575Circle"
+                }
+            ]
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 670767,
+            "ap2ID": 125350
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 674575,
+            "ap2ID": 517841
+        }
+    ],
     "fileTypeVersion": 1,
     "simplify": false,
     "filetypeVersion": 1,
