@@ -3979,7 +3979,7 @@
                 },
                 {
                     "name": "y-axis degrees",
-                    "ioValue": 225
+                    "ioValue": -225
                 },
                 {
                     "name": "z-axis degrees",
@@ -4013,7 +4013,7 @@
                 },
                 {
                     "name": "xDist",
-                    "ioValue": 0
+                    "ioValue": -800
                 },
                 {
                     "name": "yDist",
@@ -4021,7 +4021,7 @@
                 },
                 {
                     "name": "zDist",
-                    "ioValue": 2500
+                    "ioValue": 3000
                 }
             ]
         }
