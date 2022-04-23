@@ -3596,8 +3596,8 @@
                         {
                             "atomType": "Move",
                             "name": "Move",
-                            "x": 0.5533596837944664,
-                            "y": 0.13740458015267176,
+                            "x": 0.5506783719074222,
+                            "y": 0.12307692307692308,
                             "uniqueID": 382341,
                             "ioValues": [
                                 {
@@ -3864,6 +3864,64 @@
                     "unitsIndex": 0
                 },
                 {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.6600159616919393,
+                    "y": 0.7507692307692307,
+                    "uniqueID": 365487,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "source/311671/970101/379377Difference"
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": -25
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Gcode",
+                    "name": "Gcode",
+                    "x": 0.7964884277733439,
+                    "y": 0.6953846153846154,
+                    "uniqueID": 351036,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "source/311671/970101/365487Move"
+                        },
+                        {
+                            "name": "tool size",
+                            "ioValue": 6.35
+                        },
+                        {
+                            "name": "passes",
+                            "ioValue": 3
+                        },
+                        {
+                            "name": "speed",
+                            "ioValue": 500
+                        },
+                        {
+                            "name": "tabs",
+                            "ioValue": "true"
+                        },
+                        {
+                            "name": "safe height",
+                            "ioValue": 6
+                        }
+                    ]
+                },
+                {
                     "atomType": "Output",
                     "name": "Output",
                     "x": 0.9853587115666179,
@@ -3928,6 +3986,13 @@
                     "ap2ID": 248909
                 },
                 {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 379377,
+                    "ap2ID": 365487
+                },
+                {
                     "ap1Name": "number or geometry",
                     "ap2Name": "Wood Thickness",
                     "ap2Primary": false,
@@ -3947,6 +4012,13 @@
                     "ap2Primary": false,
                     "ap1ID": 827363,
                     "ap2ID": 379377
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 365487,
+                    "ap2ID": 351036
                 }
             ],
             "fileTypeVersion": 1,
@@ -3975,31 +4047,6 @@
             ]
         },
         {
-            "atomType": "Rotate",
-            "name": "Rotate",
-            "x": 0.6661786237188873,
-            "y": 0.8206106870229009,
-            "uniqueID": 403412,
-            "ioValues": [
-                {
-                    "name": "geometry",
-                    "ioValue": "source/311671/726924Assembly"
-                },
-                {
-                    "name": "x-axis degrees",
-                    "ioValue": 0
-                },
-                {
-                    "name": "y-axis degrees",
-                    "ioValue": -225
-                },
-                {
-                    "name": "z-axis degrees",
-                    "ioValue": 0
-                }
-            ]
-        },
-        {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9853587115666179,
@@ -4009,31 +4056,6 @@
                 {
                     "name": "number or geometry",
                     "ioValue": "source/311671/728468Color"
-                }
-            ]
-        },
-        {
-            "atomType": "Move",
-            "name": "Move",
-            "x": 0.8243045387994143,
-            "y": 0.767175572519084,
-            "uniqueID": 577731,
-            "ioValues": [
-                {
-                    "name": "geometry",
-                    "ioValue": "source/311671/403412Rotate"
-                },
-                {
-                    "name": "xDist",
-                    "ioValue": -800
-                },
-                {
-                    "name": "yDist",
-                    "ioValue": 0
-                },
-                {
-                    "name": "zDist",
-                    "ioValue": 3000
                 }
             ]
         }
@@ -4143,20 +4165,6 @@
             "ap2Primary": true,
             "ap1ID": 726924,
             "ap2ID": 728468
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": true,
-            "ap1ID": 726924,
-            "ap2ID": 403412
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": true,
-            "ap1ID": 403412,
-            "ap2ID": 577731
         }
     ],
     "fileTypeVersion": 1,
