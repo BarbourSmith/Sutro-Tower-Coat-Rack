@@ -4078,6 +4078,20 @@
             ]
         },
         {
+            "atomType": "Code",
+            "name": "Code",
+            "x": 0.7713801862828111,
+            "y": 0.6369230769230769,
+            "uniqueID": 212775,
+            "ioValues": [
+                {
+                    "name": "Input1",
+                    "ioValue": "source/311671/726924Assembly"
+                }
+            ],
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\n\nreturn Input1.pack();"
+        },
+        {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9853587115666179,
@@ -4196,6 +4210,13 @@
             "ap2Primary": true,
             "ap1ID": 726924,
             "ap2ID": 728468
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Input1",
+            "ap2Primary": false,
+            "ap1ID": 726924,
+            "ap2ID": 212775
         }
     ],
     "fileTypeVersion": 1,
