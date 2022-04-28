@@ -4137,50 +4137,15 @@
             "unitsIndex": 0
         },
         {
-            "atomType": "Assembly",
-            "name": "Assembly",
-            "x": 0.5585651537335286,
-            "y": 0.7213740458015268,
-            "uniqueID": 726924,
-            "ioValues": [
-                {
-                    "name": "3D shape 1",
-                    "ioValue": "source/311671/970101Molecule"
-                },
-                {
-                    "name": "3D shape 2",
-                    "ioValue": "source/311671/481005Group"
-                },
-                {
-                    "name": "3D shape 3",
-                    "ioValue": "source/311671/322048Molecule"
-                }
-            ]
-        },
-        {
-            "atomType": "Code",
-            "name": "Code",
-            "x": 0.7347883597883599,
-            "y": 0.6,
-            "uniqueID": 212775,
-            "ioValues": [
-                {
-                    "name": "Input1",
-                    "ioValue": "source/311671/726924Assembly"
-                }
-            ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst cutlistItems = Input1.get('part:' + \"cutlist\");\n\nvar leafs = cutlistItems.each(\n  (s) => s.to(s, (a) => a),\n  (leafs, shape) => leafs\n);\n\nreturn Group(...leafs).pack({itemMargin: 25});"
-        },
-        {
             "atomType": "Gcode",
             "name": "Gcode",
-            "x": 0.8478835978835979,
-            "y": 0.5692307692307692,
+            "x": 0.7917019475021168,
+            "y": 0.43692307692307697,
             "uniqueID": 133325,
             "ioValues": [
                 {
                     "name": "geometry",
-                    "ioValue": "source/311671/212775Code"
+                    "ioValue": "source/311671/227246CutLayout"
                 },
                 {
                     "name": "tool size",
@@ -4205,10 +4170,31 @@
             ]
         },
         {
+            "atomType": "Assembly",
+            "name": "Assembly",
+            "x": 0.5585651537335286,
+            "y": 0.7213740458015268,
+            "uniqueID": 726924,
+            "ioValues": [
+                {
+                    "name": "3D shape 1",
+                    "ioValue": "source/311671/970101Molecule"
+                },
+                {
+                    "name": "3D shape 2",
+                    "ioValue": "source/311671/481005Group"
+                },
+                {
+                    "name": "3D shape 3",
+                    "ioValue": "source/311671/322048Molecule"
+                }
+            ]
+        },
+        {
             "atomType": "CutLayout",
             "name": "Cut Layout",
-            "x": 0.6900931414055884,
-            "y": 0.836923076923077,
+            "x": 0.6858594411515665,
+            "y": 0.6799999999999999,
             "uniqueID": 227246,
             "ioValues": [
                 {
@@ -4235,17 +4221,18 @@
             ]
         },
         {
-            "atomType": "Svg",
-            "name": "Svg",
-            "x": 0.7925486875529213,
-            "y": 0.8276923076923077,
-            "uniqueID": 123728,
+            "atomType": "Code",
+            "name": "Code",
+            "x": 0.8204911092294666,
+            "y": 0.7692307692307692,
+            "uniqueID": 212775,
             "ioValues": [
                 {
-                    "name": "geometry",
-                    "ioValue": "source/311671/212775Code"
+                    "name": "Input1",
+                    "ioValue": "source/311671/227246CutLayout"
                 }
-            ]
+            ],
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst cutlistItems = Input1.get('part:' + \"cutlist\");\n\nvar leafs = Input1.each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\nconsole.log(leafs.length);\nconsole.log(Input1);\n\nreturn Group(...leafs);"
         }
     ],
     "allConnectors": [
@@ -4356,13 +4343,6 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "Input1",
-            "ap2Primary": false,
-            "ap1ID": 726924,
-            "ap2ID": 212775
-        },
-        {
-            "ap1Name": "geometry",
             "ap2Name": "geometry",
             "ap2Primary": false,
             "ap1ID": 726924,
@@ -4372,15 +4352,15 @@
             "ap1Name": "geometry",
             "ap2Name": "geometry",
             "ap2Primary": false,
-            "ap1ID": 212775,
+            "ap1ID": 227246,
             "ap2ID": 133325
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "geometry",
+            "ap2Name": "Input1",
             "ap2Primary": false,
-            "ap1ID": 212775,
-            "ap2ID": 123728
+            "ap1ID": 227246,
+            "ap2ID": 212775
         }
     ],
     "fileTypeVersion": 1,
