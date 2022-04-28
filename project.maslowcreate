@@ -4169,7 +4169,7 @@
                     "ioValue": "source/311671/726924Assembly"
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst cutlistItems = Input1.get('part:' + \"cutlist\");\n\nconsole.log(cutlistItems);\n\nvar leafs = cutlistItems.each(\n  (s) => s.to(s, (a) => a),\n  (leafs, shape) => leafs\n);\n\n//blue.to(blue, (s) => s)\n\nconsole.log(\"Leafs: \");\nconsole.log(leafs.length);\n\nreturn Group(...leafs).pack();\n\n//return Input1.pack();"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst cutlistItems = Input1.get('part:' + \"cutlist\");\n\nvar leafs = cutlistItems.each(\n  (s) => s.to(s, (a) => a),\n  (leafs, shape) => leafs\n);\n\nreturn Group(...leafs).pack();"
         },
         {
             "atomType": "Gcode",
@@ -4201,6 +4201,19 @@
                 {
                     "name": "safe height",
                     "ioValue": 6
+                }
+            ]
+        },
+        {
+            "atomType": "CutLayout",
+            "name": "Cut Layout",
+            "x": 0.6900931414055884,
+            "y": 0.836923076923077,
+            "uniqueID": 227246,
+            "ioValues": [
+                {
+                    "name": "Spacing",
+                    "ioValue": 5
                 }
             ]
         },
