@@ -4212,8 +4212,12 @@
             "uniqueID": 227246,
             "ioValues": [
                 {
+                    "name": "geometry",
+                    "ioValue": "source/311671/726924Assembly"
+                },
+                {
                     "name": "Spacing",
-                    "ioValue": 5
+                    "ioValue": 10
                 }
             ]
         },
@@ -4356,6 +4360,13 @@
             "ap2Primary": false,
             "ap1ID": 726924,
             "ap2ID": 212775
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": 726924,
+            "ap2ID": 227246
         },
         {
             "ap1Name": "geometry",
