@@ -2144,6 +2144,19 @@
                     "ioValues": []
                 },
                 {
+                    "atomType": "CutList",
+                    "name": "Add To Cutlist",
+                    "x": 0.43268416596104997,
+                    "y": 0.22153846153846152,
+                    "uniqueID": 272088,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "source/311671/322048/627234Molecule"
+                        }
+                    ]
+                },
+                {
                     "atomType": "Input",
                     "name": "2Height",
                     "x": 0.013333333333333334,
@@ -2525,16 +2538,29 @@
                     "uniqueID": 311010,
                     "ioValues": [
                         {
-                            "name": "3D shape 1",
-                            "ioValue": "source/311671/322048/488380Molecule"
+                            "name": "3D shape 4",
+                            "ioValue": "source/311671/322048/772450CutList"
                         },
                         {
-                            "name": "3D shape 2",
+                            "name": "3D shape 5",
+                            "ioValue": "source/311671/322048/217887CutList"
+                        },
+                        {
+                            "name": "3D shape 6",
+                            "ioValue": "source/311671/322048/272088CutList"
+                        }
+                    ]
+                },
+                {
+                    "atomType": "CutList",
+                    "name": "Add To Cutlist",
+                    "x": 0.37425910245554617,
+                    "y": 0.5846153846153846,
+                    "uniqueID": 217887,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
                             "ioValue": "source/311671/322048/884162Molecule"
-                        },
-                        {
-                            "name": "3D shape 3",
-                            "ioValue": "source/311671/322048/627234Molecule"
                         }
                     ]
                 },
@@ -2926,19 +2952,6 @@
                     ]
                 },
                 {
-                    "atomType": "CutList",
-                    "name": "Add To Cutlist",
-                    "x": 0.6494496189669772,
-                    "y": 0.7415384615384615,
-                    "uniqueID": 217887,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": ""
-                        }
-                    ]
-                },
-                {
                     "atomType": "Output",
                     "name": "Output",
                     "x": 0.9802371541501975,
@@ -2969,10 +2982,10 @@
                 },
                 {
                     "ap1Name": "Geometry",
-                    "ap2Name": "3D shape 3",
-                    "ap2Primary": false,
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
                     "ap1ID": 627234,
-                    "ap2ID": 311010
+                    "ap2ID": 272088
                 },
                 {
                     "ap1Name": "number or geometry",
@@ -2996,6 +3009,13 @@
                     "ap2ID": 884162
                 },
                 {
+                    "ap1Name": "geometry",
+                    "ap2Name": "3D shape 6",
+                    "ap2Primary": false,
+                    "ap1ID": 272088,
+                    "ap2ID": 311010
+                },
+                {
                     "ap1Name": "number or geometry",
                     "ap2Name": "Height",
                     "ap2Primary": false,
@@ -3004,10 +3024,10 @@
                 },
                 {
                     "ap1Name": "Geometry",
-                    "ap2Name": "3D shape 2",
-                    "ap2Primary": false,
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
                     "ap1ID": 884162,
-                    "ap2ID": 311010
+                    "ap2ID": 217887
                 },
                 {
                     "ap1Name": "number or geometry",
@@ -3022,6 +3042,13 @@
                     "ap2Primary": false,
                     "ap1ID": 311010,
                     "ap2ID": 470808
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "3D shape 5",
+                    "ap2Primary": false,
+                    "ap1ID": 217887,
+                    "ap2ID": 311010
                 },
                 {
                     "ap1Name": "number or geometry",
@@ -3039,17 +3066,17 @@
                 },
                 {
                     "ap1Name": "Geometry",
-                    "ap2Name": "3D shape 1",
-                    "ap2Primary": false,
-                    "ap1ID": 488380,
-                    "ap2ID": 311010
-                },
-                {
-                    "ap1Name": "Geometry",
                     "ap2Name": "geometry",
                     "ap2Primary": true,
                     "ap1ID": 488380,
                     "ap2ID": 772450
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "3D shape 4",
+                    "ap2Primary": false,
+                    "ap1ID": 772450,
+                    "ap2ID": 311010
                 }
             ],
             "fileTypeVersion": 1,
@@ -4133,8 +4160,8 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.7713801862828111,
-            "y": 0.6369230769230769,
+            "x": 0.7273497036409823,
+            "y": 0.6123076923076923,
             "uniqueID": 212775,
             "ioValues": [
                 {
@@ -4143,6 +4170,39 @@
                 }
             ],
             "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst cutlistItems = Input1.get('part:' + \"cutlist\");\n\nconsole.log(cutlistItems);\n\nvar leafs = cutlistItems.each(\n  (s) => s.to(s, (a) => a),\n  (leafs, shape) => leafs\n);\n\n//blue.to(blue, (s) => s)\n\nconsole.log(\"Leafs: \");\nconsole.log(leafs.length);\n\nreturn Group(...leafs).pack();\n\n//return Input1.pack();"
+        },
+        {
+            "atomType": "Gcode",
+            "name": "Gcode",
+            "x": 0.8484335309060119,
+            "y": 0.5692307692307692,
+            "uniqueID": 133325,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "source/311671/212775Code"
+                },
+                {
+                    "name": "tool size",
+                    "ioValue": 6.35
+                },
+                {
+                    "name": "passes",
+                    "ioValue": 6
+                },
+                {
+                    "name": "speed",
+                    "ioValue": 500
+                },
+                {
+                    "name": "tabs",
+                    "ioValue": "true"
+                },
+                {
+                    "name": "safe height",
+                    "ioValue": 6
+                }
+            ]
         },
         {
             "atomType": "Output",
@@ -4154,6 +4214,19 @@
                 {
                     "name": "number or geometry",
                     "ioValue": "source/311671/728468Color"
+                }
+            ]
+        },
+        {
+            "atomType": "Svg",
+            "name": "Svg",
+            "x": 0.7925486875529213,
+            "y": 0.8276923076923077,
+            "uniqueID": 123728,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "source/311671/212775Code"
                 }
             ]
         }
@@ -4270,6 +4343,20 @@
             "ap2Primary": false,
             "ap1ID": 726924,
             "ap2ID": 212775
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": 212775,
+            "ap2ID": 133325
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": 212775,
+            "ap2ID": 123728
         }
     ],
     "fileTypeVersion": 1,
