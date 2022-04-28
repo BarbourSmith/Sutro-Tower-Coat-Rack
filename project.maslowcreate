@@ -4160,8 +4160,8 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.7273497036409823,
-            "y": 0.6123076923076923,
+            "x": 0.7347883597883599,
+            "y": 0.6,
             "uniqueID": 212775,
             "ioValues": [
                 {
@@ -4169,12 +4169,12 @@
                     "ioValue": "source/311671/726924Assembly"
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst cutlistItems = Input1.get('part:' + \"cutlist\");\n\nvar leafs = cutlistItems.each(\n  (s) => s.to(s, (a) => a),\n  (leafs, shape) => leafs\n);\n\nreturn Group(...leafs).pack();"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst cutlistItems = Input1.get('part:' + \"cutlist\");\n\nvar leafs = cutlistItems.each(\n  (s) => s.to(s, (a) => a),\n  (leafs, shape) => leafs\n);\n\nreturn Group(...leafs).pack({itemMargin: 25});"
         },
         {
             "atomType": "Gcode",
             "name": "Gcode",
-            "x": 0.8484335309060119,
+            "x": 0.8478835978835979,
             "y": 0.5692307692307692,
             "uniqueID": 133325,
             "ioValues": [
