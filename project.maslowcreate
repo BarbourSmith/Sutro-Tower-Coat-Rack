@@ -3106,10 +3106,60 @@
             "selectedColorIndex": 0
         },
         {
+            "atomType": "CutLayout",
+            "name": "Cut Layout",
+            "x": 0.7044877222692634,
+            "y": 0.556923076923077,
+            "uniqueID": 227246,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "source/311671/726924Assembly"
+                },
+                {
+                    "name": "Spacing",
+                    "ioValue": 10
+                }
+            ]
+        },
+        {
+            "atomType": "Gcode",
+            "name": "Gcode",
+            "x": 0.7917019475021168,
+            "y": 0.43692307692307697,
+            "uniqueID": 133325,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "source/311671/227246CutLayout"
+                },
+                {
+                    "name": "tool size",
+                    "ioValue": 6.35
+                },
+                {
+                    "name": "passes",
+                    "ioValue": 6
+                },
+                {
+                    "name": "speed",
+                    "ioValue": 500
+                },
+                {
+                    "name": "tabs",
+                    "ioValue": "true"
+                },
+                {
+                    "name": "safe height",
+                    "ioValue": 6
+                }
+            ]
+        },
+        {
             "atomType": "Molecule",
             "name": "Top Triangle",
-            "x": 0.3389458272327965,
-            "y": 0.8358778625954199,
+            "x": 0.3370025402201524,
+            "y": 0.84,
             "uniqueID": 970101,
             "ioValues": [
                 {
@@ -3193,8 +3243,8 @@
                         {
                             "atomType": "Move",
                             "name": "Move",
-                            "x": 0.26679841897233203,
-                            "y": 0.4427480916030534,
+                            "x": 0.26587637595258257,
+                            "y": 0.41538461538461535,
                             "uniqueID": 682574,
                             "ioValues": [
                                 {
@@ -4137,39 +4187,6 @@
             "unitsIndex": 0
         },
         {
-            "atomType": "Gcode",
-            "name": "Gcode",
-            "x": 0.7917019475021168,
-            "y": 0.43692307692307697,
-            "uniqueID": 133325,
-            "ioValues": [
-                {
-                    "name": "geometry",
-                    "ioValue": "source/311671/227246CutLayout"
-                },
-                {
-                    "name": "tool size",
-                    "ioValue": 6.35
-                },
-                {
-                    "name": "passes",
-                    "ioValue": 6
-                },
-                {
-                    "name": "speed",
-                    "ioValue": 500
-                },
-                {
-                    "name": "tabs",
-                    "ioValue": "true"
-                },
-                {
-                    "name": "safe height",
-                    "ioValue": 6
-                }
-            ]
-        },
-        {
             "atomType": "Assembly",
             "name": "Assembly",
             "x": 0.5585651537335286,
@@ -4191,23 +4208,6 @@
             ]
         },
         {
-            "atomType": "CutLayout",
-            "name": "Cut Layout",
-            "x": 0.6858594411515665,
-            "y": 0.6799999999999999,
-            "uniqueID": 227246,
-            "ioValues": [
-                {
-                    "name": "geometry",
-                    "ioValue": "source/311671/726924Assembly"
-                },
-                {
-                    "name": "Spacing",
-                    "ioValue": 10
-                }
-            ]
-        },
-        {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9853587115666179,
@@ -4223,16 +4223,16 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.8204911092294666,
-            "y": 0.7692307692307692,
+            "x": 0.7722269263336156,
+            "y": 0.8184615384615385,
             "uniqueID": 212775,
             "ioValues": [
                 {
                     "name": "Input1",
-                    "ioValue": "source/311671/227246CutLayout"
+                    "ioValue": "source/311671/726924Assembly"
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst cutlistItems = Input1.get('part:' + \"cutlist\");\n\nvar leafs = Input1.each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\nconsole.log(leafs.length);\nconsole.log(Input1);\n\nreturn Group(...leafs);"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst cutlistItems = Input1.get('part:' + \"cutlist\");\n\nvar leafs = Input1.each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\n\nconst output = Group(...leafs).pack({packSize: [500,500]});\n\nconsole.log(\"Output: \");\nconsole.log(output);\n\nreturn output;"
         }
     ],
     "allConnectors": [
@@ -4328,6 +4328,13 @@
             "ap2ID": 517841
         },
         {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": 227246,
+            "ap2ID": 133325
+        },
+        {
             "ap1Name": "Geometry",
             "ap2Name": "3D shape 1",
             "ap2Primary": false,
@@ -4350,16 +4357,9 @@
         },
         {
             "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": false,
-            "ap1ID": 227246,
-            "ap2ID": 133325
-        },
-        {
-            "ap1Name": "geometry",
             "ap2Name": "Input1",
             "ap2Primary": false,
-            "ap1ID": 227246,
+            "ap1ID": 726924,
             "ap2ID": 212775
         }
     ],
