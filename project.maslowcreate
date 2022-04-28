@@ -2913,6 +2913,32 @@
                     "unitsIndex": 0
                 },
                 {
+                    "atomType": "CutList",
+                    "name": "Add To Cutlist",
+                    "x": 0.48010160880609654,
+                    "y": 0.7569230769230769,
+                    "uniqueID": 772450,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "source/311671/322048/488380Molecule"
+                        }
+                    ]
+                },
+                {
+                    "atomType": "CutList",
+                    "name": "Add To Cutlist",
+                    "x": 0.6494496189669772,
+                    "y": 0.7415384615384615,
+                    "uniqueID": 217887,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": ""
+                        }
+                    ]
+                },
+                {
                     "atomType": "Output",
                     "name": "Output",
                     "x": 0.9802371541501975,
@@ -3017,6 +3043,13 @@
                     "ap2Primary": false,
                     "ap1ID": 488380,
                     "ap2ID": 311010
+                },
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 488380,
+                    "ap2ID": 772450
                 }
             ],
             "fileTypeVersion": 1,
@@ -3531,6 +3564,19 @@
                     ]
                 },
                 {
+                    "atomType": "CutList",
+                    "name": "Add To Cutlist",
+                    "x": 0.8314987298899238,
+                    "y": 0.27692307692307694,
+                    "uniqueID": 821187,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "source/311671/970101/248909Move"
+                        }
+                    ]
+                },
+                {
                     "atomType": "Molecule",
                     "name": "Inner Triangle",
                     "x": 0.38726207906295756,
@@ -3930,7 +3976,7 @@
                     "ioValues": [
                         {
                             "name": "number or geometry",
-                            "ioValue": "source/311671/970101/248909Move"
+                            "ioValue": "source/311671/970101/821187CutList"
                         }
                     ]
                 },
@@ -3983,10 +4029,10 @@
                 },
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "number or geometry",
-                    "ap2Primary": false,
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
                     "ap1ID": 248909,
-                    "ap2ID": 582115
+                    "ap2ID": 821187
                 },
                 {
                     "ap1Name": "result",
@@ -4036,6 +4082,13 @@
                     "ap2Primary": false,
                     "ap1ID": 365487,
                     "ap2ID": 669305
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 821187,
+                    "ap2ID": 582115
                 },
                 {
                     "ap1Name": "Geometry",
@@ -4089,7 +4142,7 @@
                     "ioValue": "source/311671/726924Assembly"
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\n\nreturn Input1.pack();"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst cutlistItems = Input1.get('part:' + \"cutlist\");\n\nconsole.log(cutlistItems);\n\nvar leafs = cutlistItems.each(\n  (s) => s.to(s, (a) => a),\n  (leafs, shape) => leafs\n);\n\n//blue.to(blue, (s) => s)\n\nconsole.log(\"Leafs: \");\nconsole.log(leafs.length);\n\nreturn Group(...leafs).pack();\n\n//return Input1.pack();"
         },
         {
             "atomType": "Output",
