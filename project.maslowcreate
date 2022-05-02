@@ -15,8 +15,8 @@
         {
             "atomType": "Molecule",
             "name": "Side",
-            "x": 0.07174231332357248,
-            "y": 0.3129770992366412,
+            "x": 0.07535986452159187,
+            "y": 0.3138461538461539,
             "uniqueID": 763962,
             "ioValues": [
                 {
@@ -349,6 +349,48 @@
                 {
                     "atomType": "Move",
                     "name": "Move",
+                    "x": 0.6714648602878917,
+                    "y": 0.1630769230769231,
+                    "uniqueID": 574982,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "source/311671/763962/164125Extrude"
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": -9
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 0.6418289585097375,
+                    "y": 0.28615384615384615,
+                    "uniqueID": 164125,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "source/311671/763962/734927Group"
+                        },
+                        {
+                            "name": "height",
+                            "ioValue": 18
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Move",
+                    "name": "Move",
                     "x": 0.23792093704245976,
                     "y": 0.7061068702290076,
                     "uniqueID": 358661,
@@ -368,23 +410,6 @@
                         {
                             "name": "zDist",
                             "ioValue": 0
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Extrude",
-                    "name": "Extrude",
-                    "x": 0.7035139092240117,
-                    "y": 0.25572519083969464,
-                    "uniqueID": 164125,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": "source/311671/763962/734927Group"
-                        },
-                        {
-                            "name": "height",
-                            "ioValue": 18
                         }
                     ]
                 },
@@ -456,6 +481,20 @@
                     "closedSelection": 0
                 },
                 {
+                    "atomType": "Code",
+                    "name": "Code",
+                    "x": 0.7679932260795935,
+                    "y": 0.3046153846153846,
+                    "uniqueID": 147470,
+                    "ioValues": [
+                        {
+                            "name": "Input1",
+                            "ioValue": "source/311671/763962/574982Move"
+                        }
+                    ],
+                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1];\n\n\nreturn Input1.fuse();"
+                },
+                {
                     "atomType": "Circle",
                     "name": "Circle",
                     "x": 0.07686676427525622,
@@ -465,31 +504,6 @@
                         {
                             "name": "diameter",
                             "ioValue": 22
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Move",
-                    "name": "Move",
-                    "x": 0.8169838945827234,
-                    "y": 0.2748091603053435,
-                    "uniqueID": 574982,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": "source/311671/763962/164125Extrude"
-                        },
-                        {
-                            "name": "xDist",
-                            "ioValue": 0
-                        },
-                        {
-                            "name": "yDist",
-                            "ioValue": 0
-                        },
-                        {
-                            "name": "zDist",
-                            "ioValue": -9
                         }
                     ]
                 },
@@ -515,6 +529,19 @@
                         {
                             "name": "zDist",
                             "ioValue": 0
+                        }
+                    ]
+                },
+                {
+                    "atomType": "CutList",
+                    "name": "Add To Cutlist",
+                    "x": 0.8755292125317529,
+                    "y": 0.2953846153846154,
+                    "uniqueID": 973897,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "source/311671/763962/147470Code"
                         }
                     ]
                 },
@@ -1358,58 +1385,7 @@
                     "ioValues": [
                         {
                             "name": "number or geometry",
-                            "ioValue": "source/311671/763962/574982Move"
-                        }
-                    ]
-                },
-                {
-                    "atomType": "UploadSVG",
-                    "name": "SutroTower.svg",
-                    "x": 0.7306002928257687,
-                    "y": 0.8396946564885496,
-                    "uniqueID": 203517,
-                    "ioValues": [],
-                    "fileName": "SutroTower.svg"
-                },
-                {
-                    "atomType": "Group",
-                    "name": "Group",
-                    "x": 0.8806734992679356,
-                    "y": 0.7366412213740459,
-                    "uniqueID": 346285,
-                    "ioValues": [
-                        {
-                            "name": "3D shape 1",
-                            "ioValue": "source/311671/763962/734927Group"
-                        },
-                        {
-                            "name": "3D shape 2",
-                            "ioValue": "source/311671/763962/907082Move"
-                        }
-                    ]
-                },
-                {
-                    "atomType": "Move",
-                    "name": "Move",
-                    "x": 0.8030746705710103,
-                    "y": 0.8396946564885496,
-                    "uniqueID": 907082,
-                    "ioValues": [
-                        {
-                            "name": "geometry",
-                            "ioValue": "source/311671/763962/203517UploadSVG"
-                        },
-                        {
-                            "name": "xDist",
-                            "ioValue": -1520
-                        },
-                        {
-                            "name": "yDist",
-                            "ioValue": 2290
-                        },
-                        {
-                            "name": "zDist",
-                            "ioValue": 0
+                            "ioValue": "source/311671/763962/973897CutList"
                         }
                     ]
                 }
@@ -1473,6 +1449,20 @@
                 },
                 {
                     "ap1Name": "geometry",
+                    "ap2Name": "Input1",
+                    "ap2Primary": false,
+                    "ap1ID": 574982,
+                    "ap2ID": 147470
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 164125,
+                    "ap2ID": 574982
+                },
+                {
+                    "ap1Name": "geometry",
                     "ap2Name": "3D shape 3",
                     "ap2Primary": false,
                     "ap1ID": 358661,
@@ -1489,22 +1479,8 @@
                     "ap1Name": "geometry",
                     "ap2Name": "geometry",
                     "ap2Primary": true,
-                    "ap1ID": 164125,
-                    "ap2ID": 574982
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
                     "ap1ID": 734927,
                     "ap2ID": 164125
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "3D shape 1",
-                    "ap2Primary": false,
-                    "ap1ID": 734927,
-                    "ap2ID": 346285
                 },
                 {
                     "ap1Name": "geometry",
@@ -1512,6 +1488,13 @@
                     "ap2Primary": false,
                     "ap1ID": 245145,
                     "ap2ID": 734927
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 147470,
+                    "ap2ID": 973897
                 },
                 {
                     "ap1Name": "geometry",
@@ -1543,13 +1526,6 @@
                 },
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "number or geometry",
-                    "ap2Primary": false,
-                    "ap1ID": 574982,
-                    "ap2ID": 140863
-                },
-                {
-                    "ap1Name": "geometry",
                     "ap2Name": "3D shape 3",
                     "ap2Primary": false,
                     "ap1ID": 533754,
@@ -1561,6 +1537,13 @@
                     "ap2Primary": false,
                     "ap1ID": 533754,
                     "ap2ID": 809421
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 973897,
+                    "ap2ID": 140863
                 },
                 {
                     "ap1Name": "geometry",
@@ -1582,20 +1565,6 @@
                     "ap2Primary": false,
                     "ap1ID": 515329,
                     "ap2ID": 734927
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
-                    "ap1ID": 203517,
-                    "ap2ID": 907082
-                },
-                {
-                    "ap1Name": "geometry",
-                    "ap2Name": "3D shape 2",
-                    "ap2Primary": false,
-                    "ap1ID": 907082,
-                    "ap2ID": 346285
                 }
             ],
             "fileTypeVersion": 1,
@@ -3115,8 +3084,8 @@
         {
             "atomType": "Color",
             "name": "Color",
-            "x": 0.7786561264822135,
-            "y": 0.20229007633587787,
+            "x": 0.6994072819644369,
+            "y": 0.20923076923076925,
             "uniqueID": 728468,
             "ioValues": [
                 {
@@ -3135,7 +3104,7 @@
             "ioValues": [
                 {
                     "name": "geometry",
-                    "ioValue": "source/311671/726924Assembly"
+                    "ioValue": "source/311671/728468Color"
                 },
                 {
                     "name": "Spacing",
@@ -4250,16 +4219,16 @@
         {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.7722269263336156,
+            "x": 0.8086367485182049,
             "y": 0.8184615384615385,
             "uniqueID": 212775,
             "ioValues": [
                 {
                     "name": "Input1",
-                    "ioValue": "source/311671/726924Assembly"
+                    "ioValue": "source/311671/227246CutLayout"
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst cutlistItems = Input1.get('part:' + \"cutlist\");\n\nvar leafs = Input1.each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\n\nconst output = Group(...leafs).pack({packSize: [500,500]});\n\nconsole.log(\"Output: \");\nconsole.log(output);\n\nreturn output;"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst cutlistItems = Input1.get('part:' + \"cutlist\");\n\nvar leafs = Input1.each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\n\nconst output = Group(...leafs).pack({packSize: [500,500]});\n\nconsole.log(\"Output: \");\nconsole.log(output.get(\"*\"));\n\nreturn output;"
         }
     ],
     "allConnectors": [
@@ -4327,20 +4296,6 @@
             "ap2ID": 728468
         },
         {
-            "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": false,
-            "ap1ID": 726924,
-            "ap2ID": 227246
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "Input1",
-            "ap2Primary": false,
-            "ap1ID": 726924,
-            "ap2ID": 212775
-        },
-        {
             "ap1Name": "Geometry",
             "ap2Name": "3D shape 3",
             "ap2Primary": false,
@@ -4379,8 +4334,22 @@
             "ap1Name": "geometry",
             "ap2Name": "geometry",
             "ap2Primary": false,
+            "ap1ID": 728468,
+            "ap2ID": 227246
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
             "ap1ID": 227246,
             "ap2ID": 133325
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Input1",
+            "ap2Primary": false,
+            "ap1ID": 227246,
+            "ap2ID": 212775
         },
         {
             "ap1Name": "Geometry",
