@@ -3099,10 +3099,27 @@
             "ioValues": [
                 {
                     "name": "geometry",
-                    "ioValue": "source/311671/726924Assembly"
+                    "ioValue": "source/311671/577423Assembly"
                 }
             ],
             "selectedColorIndex": 0
+        },
+        {
+            "atomType": "Assembly",
+            "name": "Assembly",
+            "x": 0.6020321761219305,
+            "y": 0.5876923076923077,
+            "uniqueID": 577423,
+            "ioValues": [
+                {
+                    "name": "3D shape 1",
+                    "ioValue": "source/311671/970101Molecule"
+                },
+                {
+                    "name": "3D shape 2",
+                    "ioValue": "source/311671/322048Molecule"
+                }
+            ]
         },
         {
             "atomType": "CutLayout",
@@ -3117,7 +3134,7 @@
                 },
                 {
                     "name": "Spacing",
-                    "ioValue": 2
+                    "ioValue": 10
                 }
             ]
         },
@@ -4237,7 +4254,7 @@
                     "ioValue": "source/311671/227246CutLayout"
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst addTabs = (geometryToGcode) => {\n  console.log(\"Adding tabs\");\n\n  const shapeHeight = geometryToGcode.size().height;\n\n  const cutDepth = shapeHeight / message.passes;\n\n  const oneSlice = geometryToGcode.section().fuse().offset(message.toolSize / 2).outline();\n\n  const tabs = Group(Box(10, 10000).ez(-shapeHeight), Box(10000, 10).ez(-shapeHeight)).z(shapeHeight/-2.1); //This is not quite 1/2 because we want to cut the middle path in 3 passes...just a style choice\n\n  var acumulatedShape = oneSlice.z(-1*cutDepth).toolpath();\n  var i = 2;\n  while(i <= message.passes){\n  if(message.tabs == \"true\"){\n  acumulatedShape = Group(acumulatedShape, oneSlice.z(-i*cutDepth).cut(tabs).toolpath());\n  }\n  else{\n  acumulatedShape = Group(acumulatedShape, oneSlice.z(-i*cutDepth).toolpath());\n  }\n  acumulatedShape = Group(acumulatedShape, oneSlice.z(-i*cutDepth));\n  i = i + 1;\n  }\n\n  //acumulatedShape = acumulatedShape.z(-1*cutDepth);\n\n  return Group(acumulatedShape, tabs);\n}\n\nconsole.log(\"Begin\");\n\nconst cutlistItems = Input1.in();\n\nconsole.log(cutlistItems);\n\nvar leafs = cutlistItems.each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\nconsole.log(leafs);\n\n\nconst output = cutlistItems;//Group(...leafs);\n\nreturn output;"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst addTabs = (geometryToGcode) => {\n  console.log(\"Adding tabs\");\n\n  const shapeHeight = geometryToGcode.size().height;\n\n  const cutDepth = shapeHeight / 5;\n\n  const oneSlice = geometryToGcode.section().fuse().offset(6 / 2).outline();\n\n  var tabs = Group(Box(10, 10000).ez(-shapeHeight), Box(10000, 10).ez(-shapeHeight)).z(shapeHeight/-2.1).void(); //This is not quite 1/2 because we want to cut the middle path in 3 passes...just a style choice\n  \n  tabs = tabs.to(geometryToGcode); //Moves the tabs to be in the middle of the input shape\n\n  var acumulatedShape = oneSlice.z(-1*cutDepth).toolpath();\n  var i = 2;\n  while(i <= 5){\n  if(true){\n  acumulatedShape = Group(acumulatedShape, oneSlice.z(-i*cutDepth).cut(tabs).toolpath());\n  }\n  else{\n  acumulatedShape = Group(acumulatedShape, oneSlice.z(-i*cutDepth).toolpath());\n  }\n  acumulatedShape = Group(acumulatedShape, oneSlice.z(-i*cutDepth));\n  i = i + 1;\n  }\n\n  //acumulatedShape = acumulatedShape.z(-1*cutDepth);\n\n  return Group(acumulatedShape, tabs);\n}\n\nconsole.log(\"Begin\");\n\nconst cutlistItems = Input1.in();\n\nconsole.log(cutlistItems);\n\nvar leafs = cutlistItems.each(\n  (s) => addTabs(s),\n  (leafs, shape) => leafs\n);\n\nconsole.log(leafs);\n\n\nconst output = Group(...leafs);\n\nreturn output;"
         }
     ],
     "allConnectors": [
@@ -4298,18 +4315,18 @@
             "ap2ID": 481005
         },
         {
-            "ap1Name": "geometry",
-            "ap2Name": "geometry",
-            "ap2Primary": true,
-            "ap1ID": 726924,
-            "ap2ID": 728468
-        },
-        {
             "ap1Name": "Geometry",
             "ap2Name": "3D shape 3",
             "ap2Primary": false,
             "ap1ID": 322048,
             "ap2ID": 726924
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "3D shape 2",
+            "ap2Primary": false,
+            "ap1ID": 322048,
+            "ap2ID": 577423
         },
         {
             "ap1Name": "number or geometry",
@@ -4349,6 +4366,13 @@
         {
             "ap1Name": "geometry",
             "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 577423,
+            "ap2ID": 728468
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
             "ap2Primary": false,
             "ap1ID": 227246,
             "ap2ID": 133325
@@ -4373,6 +4397,13 @@
             "ap2Primary": false,
             "ap1ID": 970101,
             "ap2ID": 644151
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "3D shape 1",
+            "ap2Primary": false,
+            "ap1ID": 970101,
+            "ap2ID": 577423
         }
     ],
     "fileTypeVersion": 1,
