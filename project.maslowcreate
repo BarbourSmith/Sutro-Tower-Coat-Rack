@@ -7,7 +7,7 @@
     "ioValues": [
         {
             "name": "Wood Thickness",
-            "ioValue": 18
+            "ioValue": 17
         }
     ],
     "topLevel": true,
@@ -21,7 +21,7 @@
             "ioValues": [
                 {
                     "name": "Wood Thickness",
-                    "ioValue": 18
+                    "ioValue": 17
                 }
             ],
             "topLevel": false,
@@ -35,7 +35,7 @@
                     "ioValues": [
                         {
                             "name": "T",
-                            "ioValue": 18
+                            "ioValue": 17
                         }
                     ],
                     "currentEquation": "T/-2"
@@ -367,7 +367,7 @@
                         },
                         {
                             "name": "zDist",
-                            "ioValue": -9
+                            "ioValue": -8.5
                         }
                     ]
                 },
@@ -384,7 +384,7 @@
                         },
                         {
                             "name": "height",
-                            "ioValue": 18
+                            "ioValue": 17
                         }
                     ]
                 },
@@ -1730,7 +1730,7 @@
                 },
                 {
                     "name": "Wood Thickness",
-                    "ioValue": 18
+                    "ioValue": 17
                 },
                 {
                     "name": "2Height",
@@ -1784,7 +1784,7 @@
                         },
                         {
                             "name": "Wood Thickness",
-                            "ioValue": 18
+                            "ioValue": 17
                         }
                     ],
                     "topLevel": false,
@@ -2010,7 +2010,7 @@
                                 },
                                 {
                                     "name": "height",
-                                    "ioValue": 18
+                                    "ioValue": 17
                                 }
                             ]
                         },
@@ -2171,7 +2171,7 @@
                         },
                         {
                             "name": "Wood Thickness",
-                            "ioValue": 18
+                            "ioValue": 17
                         }
                     ],
                     "topLevel": false,
@@ -2397,7 +2397,7 @@
                                 },
                                 {
                                     "name": "height",
-                                    "ioValue": 18
+                                    "ioValue": 17
                                 }
                             ]
                         },
@@ -2587,7 +2587,7 @@
                         },
                         {
                             "name": "Wood Thickness",
-                            "ioValue": 18
+                            "ioValue": 17
                         }
                     ],
                     "topLevel": false,
@@ -2813,7 +2813,7 @@
                                 },
                                 {
                                     "name": "height",
-                                    "ioValue": 18
+                                    "ioValue": 17
                                 }
                             ]
                         },
@@ -3188,7 +3188,7 @@
                 },
                 {
                     "name": "Wood Thickness",
-                    "ioValue": 18
+                    "ioValue": 17
                 }
             ],
             "topLevel": false,
@@ -3218,7 +3218,7 @@
                         },
                         {
                             "name": "Wood Thickness",
-                            "ioValue": 18
+                            "ioValue": 17
                         }
                     ],
                     "topLevel": false,
@@ -3444,7 +3444,7 @@
                                 },
                                 {
                                     "name": "height",
-                                    "ioValue": 18
+                                    "ioValue": 17
                                 }
                             ]
                         },
@@ -3686,7 +3686,7 @@
                         },
                         {
                             "name": "Wood Thickness",
-                            "ioValue": 18
+                            "ioValue": 17
                         }
                     ],
                     "topLevel": false,
@@ -3912,7 +3912,7 @@
                                 },
                                 {
                                     "name": "height",
-                                    "ioValue": 18
+                                    "ioValue": 17
                                 }
                             ]
                         },
@@ -4220,16 +4220,6 @@
             "unitsIndex": 0
         },
         {
-            "atomType": "GitHubMolecule",
-            "name": "Export as JSON",
-            "x": 0.5059523809523809,
-            "y": 0.7630769230769231,
-            "uniqueID": 644151,
-            "projectID": "230192765",
-            "ioValues": [],
-            "simplify": false
-        },
-        {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9853587115666179,
@@ -4243,10 +4233,20 @@
             ]
         },
         {
+            "atomType": "GitHubMolecule",
+            "name": "Export as JSON",
+            "x": 0.6816257408975445,
+            "y": 0.8738461538461539,
+            "uniqueID": 644151,
+            "projectID": "230192765",
+            "ioValues": [],
+            "simplify": false
+        },
+        {
             "atomType": "Code",
             "name": "Code",
-            "x": 0.8086367485182049,
-            "y": 0.8184615384615385,
+            "x": 0.8052497883149873,
+            "y": 0.7723076923076924,
             "uniqueID": 212775,
             "ioValues": [
                 {
@@ -4254,7 +4254,7 @@
                     "ioValue": "source/311671/227246CutLayout"
                 }
             ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst addTabs = (geometryToGcode) => {\n  console.log(\"Adding tabs\");\n\n  const shapeHeight = geometryToGcode.size().height;\n\n  const cutDepth = shapeHeight / 5;\n\n  const oneSlice = geometryToGcode.section().fuse().offset(6 / 2).outline();\n\n  var tabs = Group(Box(10, 10000).ez(-shapeHeight), Box(10000, 10).ez(-shapeHeight)).z(shapeHeight/-2.1).void(); //This is not quite 1/2 because we want to cut the middle path in 3 passes...just a style choice\n  \n  tabs = tabs.to(geometryToGcode); //Moves the tabs to be in the middle of the input shape\n\n  var acumulatedShape = oneSlice.z(-1*cutDepth).toolpath();\n  var i = 2;\n  while(i <= 5){\n  if(true){\n  acumulatedShape = Group(acumulatedShape, oneSlice.z(-i*cutDepth).cut(tabs).toolpath());\n  }\n  else{\n  acumulatedShape = Group(acumulatedShape, oneSlice.z(-i*cutDepth).toolpath());\n  }\n  acumulatedShape = Group(acumulatedShape, oneSlice.z(-i*cutDepth));\n  i = i + 1;\n  }\n\n  //acumulatedShape = acumulatedShape.z(-1*cutDepth);\n\n  return Group(acumulatedShape, tabs);\n}\n\nconsole.log(\"Begin\");\n\nconst cutlistItems = Input1.in();\n\nconsole.log(cutlistItems);\n\nvar leafs = cutlistItems.each(\n  (s) => addTabs(s),\n  (leafs, shape) => leafs\n);\n\nconsole.log(leafs);\n\n\nconst output = Group(...leafs);\n\nreturn output;"
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\nconst addTabs = (geometryToGcode) => {\n  console.log(\"Adding tabs\");\n\n  const shapeHeight = geometryToGcode.size().height;\n\n  const cutDepth = shapeHeight / 5;\n\n  const oneSlice = geometryToGcode.section().fuse().offset(6 / 2).outline();\n\n  var tabs = Group(Box(10, 10000).ez(-shapeHeight), Box(10000, 10).ez(-shapeHeight)).z(shapeHeight/-2.1).void(); //This is not quite 1/2 because we want to cut the middle path in 3 passes...just a style choice\n  \n  tabs = tabs.to(geometryToGcode); //Moves the tabs to be in the middle of the input shape\n\n  var acumulatedShape = oneSlice.z(-1*cutDepth).toolpath();\n  var i = 2;\n  while(i <= 5){\n  if(true){\n  acumulatedShape = Group(acumulatedShape, oneSlice.z(-i*cutDepth).cut(tabs).toolpath());\n  }\n  else{\n  acumulatedShape = Group(acumulatedShape, oneSlice.z(-i*cutDepth).toolpath());\n  }\n  acumulatedShape = Group(acumulatedShape, oneSlice.z(-i*cutDepth));\n  i = i + 1;\n  }\n\n  //acumulatedShape = acumulatedShape.z(-1*cutDepth);\n\n  return Group(acumulatedShape, tabs);\n}\n\nconst addCylinder = (packedShape) => {\n  const cylinder = Arc(2, 2, 20).color('red');\n  return Group(packedShape, cylinder.to(packedShape));\n};\n\nconsole.log(\"Begin\");\n\nconst cutlistItems = Input1.in();\n\nconsole.log(cutlistItems);\n\nvar leafs = cutlistItems.each(\n  (s) => addCylinder(s),\n  (leafs, shape) => leafs\n);\n\nconsole.log(leafs);\n\n\nconst output = Group(...leafs);\n\nreturn output;"
         }
     ],
     "allConnectors": [
@@ -4385,18 +4385,18 @@
             "ap2ID": 212775
         },
         {
+            "ap1Name": "geometry",
+            "ap2Name": "Geometry",
+            "ap2Primary": false,
+            "ap1ID": 227246,
+            "ap2ID": 644151
+        },
+        {
             "ap1Name": "Geometry",
             "ap2Name": "3D shape 1",
             "ap2Primary": false,
             "ap1ID": 970101,
             "ap2ID": 726924
-        },
-        {
-            "ap1Name": "Geometry",
-            "ap2Name": "Geometry",
-            "ap2Primary": false,
-            "ap1ID": 970101,
-            "ap2ID": 644151
         },
         {
             "ap1Name": "Geometry",
