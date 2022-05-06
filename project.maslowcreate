@@ -4196,8 +4196,8 @@
         {
             "atomType": "Molecule",
             "name": "Manual Layout",
-            "x": 0.5925925925925926,
-            "y": 0.7630769230769231,
+            "x": 0.5952380952380952,
+            "y": 0.7507692307692307,
             "uniqueID": 245485,
             "ioValues": [
                 {
@@ -4219,7 +4219,7 @@
                             "ioValue": "source/311671/227246CutLayout"
                         }
                     ],
-                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[layout];\n\nvar leafs = layout.in().each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\n\nreturn Group(leafs[0], leafs[1].y(-20).x(110), leafs[2]);"
+                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[layout];\n\nvar leafs = layout.in().each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\n\nreturn Group(leafs[0].y(-40).x(220), leafs[1].y(-20).x(110), leafs[2], leafs[3].y(900).x(-150), leafs[4], leafs[5].rz(1/6).y(300).x(100));"
                 },
                 {
                     "atomType": "Input",
@@ -4235,10 +4235,22 @@
                     "x": 0.9867724867724867,
                     "y": 0.5,
                     "uniqueID": 341771,
-                    "ioValues": []
+                    "ioValues": [
+                        {
+                            "name": "number or geometry",
+                            "ioValue": "source/311671/245485/680475Code"
+                        }
+                    ]
                 }
             ],
             "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 680475,
+                    "ap2ID": 341771
+                },
                 {
                     "ap1Name": "number or geometry",
                     "ap2Name": "layout",
