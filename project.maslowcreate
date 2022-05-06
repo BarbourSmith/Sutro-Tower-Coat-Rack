@@ -4194,6 +4194,64 @@
             ]
         },
         {
+            "atomType": "Molecule",
+            "name": "Manual Layout",
+            "x": 0.5925925925925926,
+            "y": 0.7630769230769231,
+            "uniqueID": 245485,
+            "ioValues": [
+                {
+                    "name": "Layout",
+                    "ioValue": "source/311671/227246CutLayout"
+                }
+            ],
+            "topLevel": false,
+            "allAtoms": [
+                {
+                    "atomType": "Code",
+                    "name": "Code",
+                    "x": 0.24603174603174605,
+                    "y": 0.52,
+                    "uniqueID": 680475,
+                    "ioValues": [
+                        {
+                            "name": "layout",
+                            "ioValue": "source/311671/227246CutLayout"
+                        }
+                    ],
+                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[layout];\n\nvar leafs = layout.in().each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\n\nreturn Group(leafs[0], leafs[1].y(-20).x(110), leafs[2]);"
+                },
+                {
+                    "atomType": "Input",
+                    "name": "Layout",
+                    "x": 0.013333333333333334,
+                    "y": 0.7251908396946565,
+                    "uniqueID": 686211,
+                    "ioValues": []
+                },
+                {
+                    "atomType": "Output",
+                    "name": "Output",
+                    "x": 0.9867724867724867,
+                    "y": 0.5,
+                    "uniqueID": 341771,
+                    "ioValues": []
+                }
+            ],
+            "allConnectors": [
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "layout",
+                    "ap2Primary": false,
+                    "ap1ID": 686211,
+                    "ap2ID": 680475
+                }
+            ],
+            "fileTypeVersion": 1,
+            "simplify": false,
+            "unitsIndex": 0
+        },
+        {
             "atomType": "Output",
             "name": "Output",
             "x": 0.9853587115666179,
@@ -4371,6 +4429,13 @@
             "ap2Primary": false,
             "ap1ID": 227246,
             "ap2ID": 644151
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "Layout",
+            "ap2Primary": false,
+            "ap1ID": 227246,
+            "ap2ID": 245485
         },
         {
             "ap1Name": "Geometry",
