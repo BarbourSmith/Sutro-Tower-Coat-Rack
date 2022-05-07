@@ -3098,8 +3098,8 @@
         {
             "atomType": "CutLayout",
             "name": "Cut Layout",
-            "x": 0.7123015873015873,
-            "y": 0.38153846153846155,
+            "x": 0.71494708994709,
+            "y": 0.38769230769230767,
             "uniqueID": 227246,
             "ioValues": [
                 {
@@ -3111,20 +3111,6 @@
                     "ioValue": 10
                 }
             ]
-        },
-        {
-            "atomType": "Code",
-            "name": "Code",
-            "x": 0.4993386243386243,
-            "y": 0.7538461538461539,
-            "uniqueID": 770436,
-            "ioValues": [
-                {
-                    "name": "Input1",
-                    "ioValue": "source/311671/227246CutLayout"
-                }
-            ],
-            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\n\nconst addTabs = (geometryToGcode) => {\n  console.log('Adding tabs');\n\n  const shapeHeight = geometryToGcode.size().height;\n\n  const cutDepth = shapeHeight / 5;\n\n  const oneSlice = geometryToGcode\n    .section()\n    .fuse()\n    .offset(6 / 2) //This is to compensate for the cutting tool size\n    .outline();\n\n  var tabs = Group(\n    Box(7, geometryToGcode.size().width * 2).ez(-shapeHeight * 2),\n    Box(geometryToGcode.size().length * 2, 7).ez(-shapeHeight * 2)\n  ).z(shapeHeight / -2.1); //This is not quite 1/2 because we want to cut the middle path in 3 passes...just a style choice\n\n  tabs = tabs.to(geometryToGcode.in()); //Moves the tabs to be in the middle of the input shape\n\n  var acumulatedShape = oneSlice.z(-1 * cutDepth);\n  var i = 2;\n  while (i <= 5) {\n    acumulatedShape = Group(\n      acumulatedShape,\n      oneSlice.z(-i * cutDepth).cut(tabs)\n    );\n    i = i + 1;\n  }\n\n  return acumulatedShape; //Group(acumulatedShape, tabs);\n};\n\nconst packed = Box(100, 100, 2).pack();\n\nvar leafs = packed.in().each(\n  (s) => addTabs(s),\n  (leafs, shape) => leafs\n);\n\nvar leafs = Input1.in().each(\n  (s) => addTabs(s),\n  (leafs, shape) => leafs\n);\n\nreturn  Group(...leafs);"
         },
         {
             "atomType": "Molecule",
@@ -4208,10 +4194,24 @@
             ]
         },
         {
+            "atomType": "Code",
+            "name": "Code",
+            "x": 0.5059523809523809,
+            "y": 0.7692307692307692,
+            "uniqueID": 770436,
+            "ioValues": [
+                {
+                    "name": "Input1",
+                    "ioValue": "source/311671/227246CutLayout"
+                }
+            ],
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\n\nconst addTabs = (geometryToGcode) => {\n  console.log('Adding tabs');\n\n  const shapeHeight = geometryToGcode.size().height;\n\n  const cutDepth = shapeHeight / 5;\n\n  const oneSlice = geometryToGcode\n    .section()\n    .fuse()\n    .offset(6 / 2) //This is to compensate for the cutting tool size\n    .outline();\n\n  var tabs = Group(\n    Box(7, geometryToGcode.size().width * 2).ez(-shapeHeight * 20),\n    Box(geometryToGcode.size().length * 2, 7).ez(-shapeHeight * 20)\n  ).z(shapeHeight / .1); //This is not quite 1/2 because we want to cut the middle path in 3 passes...just a style choice\n\n  tabs = tabs.to(geometryToGcode.in()); //Moves the tabs to be in the middle of the input shape\n\n  var acumulatedShape = oneSlice.z(-1 * cutDepth);\n  var i = 2;\n  while (i <= 5) {\n    acumulatedShape = Group(\n      acumulatedShape,\n      oneSlice.z(-i * cutDepth).cut(tabs)\n    );\n    i = i + 1;\n  }\n\n  return acumulatedShape;//Group(acumulatedShape, tabs);\n};\n\nconst packed = Box(100, 100, 2).pack();\n\nvar leafs = Input1.in().each(\n  (s) => addTabs(s),\n  (leafs, shape) => leafs\n);\n\nreturn  Group(...leafs);"
+        },
+        {
             "atomType": "Molecule",
             "name": "Manual Layout",
-            "x": 0.5952380952380952,
-            "y": 0.7507692307692307,
+            "x": 0.585978835978836,
+            "y": 0.7261538461538461,
             "uniqueID": 245485,
             "ioValues": [
                 {
@@ -4303,16 +4303,6 @@
                 }
             ],
             "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[Input1, Input2];\n\n\nreturn Group(Input1, Input2)"
-        },
-        {
-            "atomType": "GitHubMolecule",
-            "name": "Export as JSON",
-            "x": 0.6765453005927181,
-            "y": 0.9046153846153846,
-            "uniqueID": 644151,
-            "projectID": "230192765",
-            "ioValues": [],
-            "simplify": false
         },
         {
             "atomType": "Code",
@@ -4441,13 +4431,6 @@
             "ap2Primary": false,
             "ap1ID": 227246,
             "ap2ID": 212775
-        },
-        {
-            "ap1Name": "geometry",
-            "ap2Name": "Geometry",
-            "ap2Primary": false,
-            "ap1ID": 227246,
-            "ap2ID": 644151
         },
         {
             "ap1Name": "geometry",
