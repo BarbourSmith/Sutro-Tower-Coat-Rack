@@ -741,6 +741,21 @@
                     ]
                 },
                 {
+                    "atomType": "GitHubMolecule",
+                    "name": "Grow",
+                    "x": 0.6772486772486772,
+                    "y": 0.6369230769230769,
+                    "uniqueID": 123451,
+                    "projectID": "409214963",
+                    "ioValues": [
+                        {
+                            "name": "Amount",
+                            "ioValue": 2
+                        }
+                    ],
+                    "simplify": false
+                },
+                {
                     "atomType": "Equation",
                     "name": "0.25*D",
                     "x": 0.21494708994708994,
@@ -753,21 +768,6 @@
                         }
                     ],
                     "currentEquation": "0.25*D"
-                },
-                {
-                    "atomType": "GitHubMolecule",
-                    "name": "Grow",
-                    "x": 0.6706349206349206,
-                    "y": 0.676923076923077,
-                    "uniqueID": 123451,
-                    "projectID": "409214963",
-                    "ioValues": [
-                        {
-                            "name": "Amount",
-                            "ioValue": 1
-                        }
-                    ],
-                    "simplify": false
                 },
                 {
                     "atomType": "Output",
@@ -918,18 +918,18 @@
                     "ap2ID": 992071
                 },
                 {
-                    "ap1Name": "result",
-                    "ap2Name": "diameter",
-                    "ap2Primary": false,
-                    "ap1ID": 473348,
-                    "ap2ID": 928059
-                },
-                {
                     "ap1Name": "Geometry",
                     "ap2Name": "geometry1",
                     "ap2Primary": false,
                     "ap1ID": 123451,
                     "ap2ID": 882220
+                },
+                {
+                    "ap1Name": "result",
+                    "ap2Name": "diameter",
+                    "ap2Primary": false,
+                    "ap1ID": 473348,
+                    "ap2ID": 928059
                 },
                 {
                     "ap1Name": "geometry",
@@ -975,8 +975,8 @@
         {
             "atomType": "Molecule",
             "name": "Outlet",
-            "x": 0.23711340206185566,
-            "y": 0.7907692307692308,
+            "x": 0.23677248677248677,
+            "y": 0.7723076923076924,
             "uniqueID": 387877,
             "ioValues": [
                 {
@@ -1053,6 +1053,21 @@
                     "currentEquation": "-.625*D"
                 },
                 {
+                    "atomType": "GitHubMolecule",
+                    "name": "Inset",
+                    "x": 0.37433862433862436,
+                    "y": 0.5507692307692308,
+                    "uniqueID": 586319,
+                    "projectID": "436083570",
+                    "ioValues": [
+                        {
+                            "name": "Amount To Inset",
+                            "ioValue": 2
+                        }
+                    ],
+                    "simplify": false
+                },
+                {
                     "atomType": "Extrude",
                     "name": "Extrude",
                     "x": 0.4986772486772487,
@@ -1068,21 +1083,6 @@
                             "ioValue": -92
                         }
                     ]
-                },
-                {
-                    "atomType": "GitHubMolecule",
-                    "name": "Inset",
-                    "x": 0.36243386243386244,
-                    "y": 0.6461538461538461,
-                    "uniqueID": 586319,
-                    "projectID": "436083570",
-                    "ioValues": [
-                        {
-                            "name": "Amount To Inset",
-                            "ioValue": 2
-                        }
-                    ],
-                    "simplify": false
                 },
                 {
                     "atomType": "Assembly",
@@ -1206,7 +1206,7 @@
                         },
                         {
                             "name": "zDist",
-                            "ioValue": -0.5
+                            "ioValue": 0.5
                         }
                     ]
                 }
@@ -1283,18 +1283,18 @@
                     "ap2ID": 328617
                 },
                 {
-                    "ap1Name": "geometry",
-                    "ap2Name": "geometry",
-                    "ap2Primary": true,
-                    "ap1ID": 437539,
-                    "ap2ID": 810704
-                },
-                {
                     "ap1Name": "Geometry",
                     "ap2Name": "geometry",
                     "ap2Primary": true,
                     "ap1ID": 586319,
                     "ap2ID": 437539
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 437539,
+                    "ap2ID": 810704
                 },
                 {
                     "ap1Name": "geometry",
