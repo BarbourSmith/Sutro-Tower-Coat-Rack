@@ -256,6 +256,31 @@
                     "currentEquation": "D/2"
                 },
                 {
+                    "atomType": "Move",
+                    "name": "Move",
+                    "x": 0.919973544973545,
+                    "y": 0.3353846153846154,
+                    "uniqueID": 141784,
+                    "ioValues": [
+                        {
+                            "name": "geometry",
+                            "ioValue": "source/217778/945368/883435Difference"
+                        },
+                        {
+                            "name": "xDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "yDist",
+                            "ioValue": 0
+                        },
+                        {
+                            "name": "zDist",
+                            "ioValue": 1
+                        }
+                    ]
+                },
+                {
                     "atomType": "Extrude",
                     "name": "Extrude",
                     "x": 0.7850911974623315,
@@ -281,7 +306,7 @@
                     "ioValues": [
                         {
                             "name": "number or geometry",
-                            "ioValue": "source/217778/945368/883435Difference"
+                            "ioValue": "source/217778/945368/141784Move"
                         }
                     ]
                 },
@@ -473,6 +498,13 @@
                 },
                 {
                     "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 141784,
+                    "ap2ID": 658159
+                },
+                {
+                    "ap1Name": "geometry",
                     "ap2Name": "geometry2",
                     "ap2Primary": false,
                     "ap1ID": 981068,
@@ -480,10 +512,10 @@
                 },
                 {
                     "ap1Name": "geometry",
-                    "ap2Name": "number or geometry",
-                    "ap2Primary": false,
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
                     "ap1ID": 883435,
-                    "ap2ID": 658159
+                    "ap2ID": 141784
                 },
                 {
                     "ap1Name": "geometry",
