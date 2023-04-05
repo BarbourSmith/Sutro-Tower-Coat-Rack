@@ -7,7 +7,7 @@
     "ioValues": [
         {
             "name": "Wood Thickness",
-            "ioValue": 17
+            "ioValue": 11.5
         }
     ],
     "topLevel": true,
@@ -21,7 +21,7 @@
             "ioValues": [
                 {
                     "name": "Wood Thickness",
-                    "ioValue": 17
+                    "ioValue": 11.5
                 }
             ],
             "topLevel": false,
@@ -35,7 +35,7 @@
                     "ioValues": [
                         {
                             "name": "T",
-                            "ioValue": 17
+                            "ioValue": 11.5
                         }
                     ],
                     "currentEquation": "T/-2"
@@ -367,7 +367,7 @@
                         },
                         {
                             "name": "zDist",
-                            "ioValue": -8.5
+                            "ioValue": -5.75
                         }
                     ]
                 },
@@ -384,7 +384,7 @@
                         },
                         {
                             "name": "height",
-                            "ioValue": 17
+                            "ioValue": 11.5
                         }
                     ]
                 },
@@ -1739,7 +1739,7 @@
                 },
                 {
                     "name": "Wood Thickness",
-                    "ioValue": 17
+                    "ioValue": 11.5
                 },
                 {
                     "name": "2Height",
@@ -1793,7 +1793,7 @@
                         },
                         {
                             "name": "Wood Thickness",
-                            "ioValue": 17
+                            "ioValue": 11.5
                         }
                     ],
                     "topLevel": false,
@@ -2019,7 +2019,7 @@
                                 },
                                 {
                                     "name": "height",
-                                    "ioValue": 17
+                                    "ioValue": 11.5
                                 }
                             ]
                         },
@@ -2180,7 +2180,7 @@
                         },
                         {
                             "name": "Wood Thickness",
-                            "ioValue": 17
+                            "ioValue": 11.5
                         }
                     ],
                     "topLevel": false,
@@ -2406,7 +2406,7 @@
                                 },
                                 {
                                     "name": "height",
-                                    "ioValue": 17
+                                    "ioValue": 11.5
                                 }
                             ]
                         },
@@ -2596,7 +2596,7 @@
                         },
                         {
                             "name": "Wood Thickness",
-                            "ioValue": 17
+                            "ioValue": 11.5
                         }
                     ],
                     "topLevel": false,
@@ -2822,7 +2822,7 @@
                                 },
                                 {
                                     "name": "height",
-                                    "ioValue": 17
+                                    "ioValue": 11.5
                                 }
                             ]
                         },
@@ -3152,7 +3152,7 @@
                 },
                 {
                     "name": "Wood Thickness",
-                    "ioValue": 17
+                    "ioValue": 11.5
                 }
             ],
             "topLevel": false,
@@ -3182,7 +3182,7 @@
                         },
                         {
                             "name": "Wood Thickness",
-                            "ioValue": 17
+                            "ioValue": 11.5
                         }
                     ],
                     "topLevel": false,
@@ -3408,7 +3408,7 @@
                                 },
                                 {
                                     "name": "height",
-                                    "ioValue": 17
+                                    "ioValue": 11.5
                                 }
                             ]
                         },
@@ -3650,7 +3650,7 @@
                         },
                         {
                             "name": "Wood Thickness",
-                            "ioValue": 17
+                            "ioValue": 11.5
                         }
                     ],
                     "topLevel": false,
@@ -3876,7 +3876,7 @@
                                 },
                                 {
                                     "name": "height",
-                                    "ioValue": 17
+                                    "ioValue": 11.5
                                 }
                             ]
                         },
@@ -4219,8 +4219,8 @@
         {
             "atomType": "Molecule",
             "name": "Manual Layout",
-            "x": 0.585978835978836,
-            "y": 0.7261538461538461,
+            "x": 0.5912698412698413,
+            "y": 0.7345679012345678,
             "uniqueID": 245485,
             "ioValues": [
                 {
@@ -4242,7 +4242,7 @@
                             "ioValue": "source/311671/227246CutLayout"
                         }
                     ],
-                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[layout];\n\nvar leafs = layout.in().each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\n\nreturn Group(leafs[0].y(-40).x(220), leafs[1].y(-20).x(110), leafs[2], leafs[3].y(900).x(-150), leafs[4].y(50).x(-120), leafs[5].rz(1/6).y(300).x(100)).as(\"packed\");"
+                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[layout];\n\nvar leafs = layout.in().each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\n\nreturn Group(leafs[0].y(-40).x(260), leafs[1].y(-20).x(130), leafs[2], leafs[3].y(900).x(-150), leafs[4].y(50).x(-120), leafs[5].rz(1/6).y(300).x(100)).as(\"packed\");"
                 },
                 {
                     "atomType": "Input",
@@ -4285,6 +4285,19 @@
             "fileTypeVersion": 1,
             "simplify": false,
             "unitsIndex": 0
+        },
+        {
+            "atomType": "Stl",
+            "name": "Stl",
+            "x": 0.7116402116402116,
+            "y": 0.8240740740740741,
+            "uniqueID": 896257,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": "source/311671/245485Molecule"
+                }
+            ]
         },
         {
             "atomType": "Code",
@@ -4475,11 +4488,18 @@
             "ap2Primary": false,
             "ap1ID": 245485,
             "ap2ID": 133325
+        },
+        {
+            "ap1Name": "Geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": false,
+            "ap1ID": 245485,
+            "ap2ID": 896257
         }
     ],
     "fileTypeVersion": 1,
     "simplify": false,
     "unitsIndex": 0,
     "filetypeVersion": 1,
-    "circleSegmentSize": "0.151"
+    "circleSegmentSize": "0.051"
 }
