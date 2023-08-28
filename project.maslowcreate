@@ -4242,7 +4242,7 @@
                             "ioValue": "source/311671/227246CutLayout"
                         }
                     ],
-                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[layout];\n\nvar leafs = layout.in().each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\n\nreturn Group(leafs[0].y(-40).x(260), leafs[1].y(-20).x(130), leafs[2], leafs[3].y(900).x(-150), leafs[4].y(50).x(-120), leafs[5].rz(1/6).y(300).x(100)).as(\"packed\");"
+                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n//Inputs:[layout];\n\nvar leafs = layout.in().each(\n  (s) => s,\n  (leafs, shape) => leafs\n);\n\n\nreturn Group(leafs[0].y(-40).x(260), leafs[1].y(-20).x(130), leafs[2], leafs[3].y(900).x(-150), leafs[4].y(50).x(-120), leafs[5].rz(1/6).y(300).x(100), leafs[6].rz(1/6).y(-300).x(-50)).as(\"packed\");"
                 },
                 {
                     "atomType": "Input",
